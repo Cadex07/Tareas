@@ -1,0 +1,165 @@
+body {
+  background: #f4f7fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #2d6cdf;
+  letter-spacing: 2px;
+}
+
+form#task-form {
+  background: #fff;
+  max-width: 400px;
+  margin: 30px auto 20px auto;
+  padding: 24px 32px 20px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 108, 223, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+form#login-form,
+form#register-form {
+  background: #fff;
+  max-width: 400px;
+  margin: 40px auto 20px auto;
+  padding: 24px 32px 20px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 108, 223, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+form#task-form input,
+form#task-form textarea,
+form#task-form select {
+  padding: 10px;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  background: #f8fafc;
+}
+
+form#task-form input:focus,
+form#task-form textarea:focus,
+form#task-form select:focus {
+  border: 1.5px solid #2d6cdf;
+}
+
+form#task-form button[type="submit"] {
+  background: #2d6cdf;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+form#task-form button[type="submit"]:hover {
+  background: #1e4fa0;
+}
+
+button[onclick="logout()"] {
+  display: block;
+  margin: 0 auto 30px auto;
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[onclick="logout()"]:hover {
+  background: #b91c1c;
+}
+
+#task-list {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.task {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(44, 108, 223, 0.07);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  border-left: 5px solid #2d6cdf;
+}
+
+.task h3 {
+  margin: 0 0 4px 0;
+  color: #2d6cdf;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.task p {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.task button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.97rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.task .eliminar-btn {
+  background: #e53e3e;
+  color: #fff;
+}
+
+.task .eliminar-btn:hover {
+  background: #b91c1c;
+}
+
+.task .editar-btn {
+  background: #fbbf24;
+  color: #222;
+}
+
+.task .editar-btn:hover {
+  background: #f59e1b;
+}
+
+@media (max-width: 700px) {
+  form#task-form, #task-list {
+    max-width: 95vw;
+    padding: 0 2vw;
+  }
+  .task {
+    padding: 16px 10px;
+  }
+}

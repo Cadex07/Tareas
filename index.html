@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Organizador de Tareas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Mis Tareas</h1>
+  <form id="task-form">
+    <input type="text" id="titulo" placeholder="Título" required />
+    <textarea id="descripcion" placeholder="Descripción" required></textarea>
+    <input type="date" id="fecha" required />
+    <select id="prioridad"> 
+      <option value="alta">Alta</option>
+      <option value="media">Media</option>
+      <option value="baja">Baja</option>
+    </select>
+    <button type="submit" id="submit-btn">Agregar</button>
+  </form>
+  <button onclick="logout()">Cerrar sesión</button>
+  <section id="task-list"></section>
+  <script src="app.js"></script>
+</body>
+</html>
